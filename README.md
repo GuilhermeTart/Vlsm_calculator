@@ -15,7 +15,6 @@ Este script é um programa em Python que calcula o VLSM (Variable Length Subnet 
 ![image](https://github.com/GuilhermeTart/Vlsm_calculator/assets/136984328/d4c0ff7a-0757-4e85-ae8f-739ea962574e)
 
 
-
 ## Requisitos
 
 pip install ipaddress
