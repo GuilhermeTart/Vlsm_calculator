@@ -27,8 +27,8 @@ def show_name_of_program():
 
 def calcular_vlsm(ip_rede, num_hosts):
     try:
-        rede = ipaddress.ip_network(ip_rede, strict=False)
-        subnets = list(rede.subnets(new_prefix=32 - num_hosts.bit_length()))
+        rede = ipaddress.ip_network(ip_rede, strict=False) #Essa linha pega todos os bits de host e transforma em rede.
+        subnets = list(rede.subnets(new_prefix=32 - num_hosts.bit_length())) #Gera sub-redes baseado o no input da rede, gerando o prefixo das sub-redes,e criando os hosts em uma lista.
         for subnet in subnets:
             print(f"{colors.orange}Rede: {subnet.network_address}{colors.reset}")
             print(f"{colors.orange}Broadcast: {subnet.broadcast_address}{colors.reset}")
